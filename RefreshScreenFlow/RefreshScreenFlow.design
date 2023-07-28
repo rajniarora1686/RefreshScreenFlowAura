@@ -1,5 +1,3 @@
 <design:component>
-	<design:attribute name="flowData" label="Flow API Name" />
-    <design:attribute name="recordId" label="recordId" />
-
+	<design:attribute name="flowAPIName" label="Flow API Name" />
 </design:component>

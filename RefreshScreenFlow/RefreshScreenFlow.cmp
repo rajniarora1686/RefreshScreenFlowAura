@@ -1,8 +1,11 @@
 <aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
-    <aura:attribute name="flowData" type="String"></aura:attribute>
+    <aura:attribute name="flowAPIName" type="String"></aura:attribute>
     <aura:attribute name="recordId" type="String"></aura:attribute>
     
     <aura:handler name="init" value="{!this}" action="{!c.init}" />
-        <lightning:flow aura:id="flowData" />
+    <aura:handler event="force:showToast" action="{!c.dorefresh}"/>
+    <aura:handler event="force:refreshView" action="{!c.init}"/>
+        
+    <span aura:id="flowContainer"></span>
         
 </aura:component>
